@@ -1,0 +1,17 @@
+# Direktori dependensi Node.js
+node_modules/
+
+# File konfigurasi yang sensitif
+.env
+.env.local
+
+# Folder build/dist frontend (hasil dari Vite)
+frontend/dist/
+
+# Folder build backend
+backend/build/
+
+# Log dan file temporer lainnya
+npm-debug.log*
+yarn-debug.log*
+.DS_Store

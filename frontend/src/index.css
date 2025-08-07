@@ -1,0 +1,43 @@
+/* src/index.css */
+:root {
+    --color-primary: #AB886D; /* Cokelat sedang, untuk tombol, highlight */
+    --color-secondary: #D6C0B3; /* Krem muda, latar belakang elemen */
+    --color-tertiary: #493628; /* Cokelat gelap, untuk teks, header */
+    --color-background: #E4E0E1; /* Abu-abu terang, latar belakang utama */
+    --color-text: #493628; /* Teks utama */
+    --color-light-text: #666; /* Teks sekunder */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Atau font pilihan Anda */
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles for buttons, links, etc. */
+button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-tertiary);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

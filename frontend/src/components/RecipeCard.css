@@ -1,0 +1,76 @@
+/* src/components/RecipeCard.css */
+.recipe-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Hilangkan underline dari Link */
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.recipe-card-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 65%; /* Rasio aspek 4:3 (tinggi/lebar * 100%) */
+    overflow: hidden;
+}
+
+.recipe-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover .recipe-card-image {
+    transform: scale(1.05); /* Efek zoom-in pada gambar saat hover */
+}
+
+.category-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card-content {
+    padding: 1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pastikan konten mengisi sisa ruang */
+}
+
+.recipe-card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--color-tertiary);
+    line-height: 1.3;
+}
+
+.recipe-card-description {
+    font-size: 0.95rem;
+    color: var(--color-light-text);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Pastikan deskripsi mengisi ruang */
+}

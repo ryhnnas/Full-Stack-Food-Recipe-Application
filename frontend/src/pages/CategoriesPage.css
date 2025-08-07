@@ -1,0 +1,119 @@
+/* src/pages/CategoriesPage.css */
+.categories-page {
+    background-color: var(--color-background);
+    min-height: 100vh;
+}
+
+.categories-main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.categories-main-content h1 {
+    font-size: 2.5rem;
+    color: var(--color-tertiary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.category-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 3rem;
+}
+
+.category-selection .category-button {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: 2px solid var(--color-secondary);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Mencegah tombol pecah baris */
+}
+
+.category-selection .category-button:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.category-selection .category-button.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.category-selection .category-button.reset-filter {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+.category-selection .category-button.reset-filter:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+
+.category-recipes-title {
+    font-size: 2rem;
+    color: var(--color-tertiary);
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.category-recipes-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-light-text);
+    padding: 3rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .categories-main-content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    .categories-main-content h1 {
+        font-size: 2rem;
+    }
+    .category-recipes-title {
+        font-size: 1.8rem;
+    }
+    .category-selection .category-button {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}

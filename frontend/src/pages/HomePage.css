@@ -1,0 +1,191 @@
+/* src/pages/HomePage.css */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/images/hero-bg.jpg') no-repeat center center/cover; /* Tambahkan gambar di public/images */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.add-recipe-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.add-recipe-button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block; /* Agar bisa pakai padding dan margin */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-recipe-button:hover {
+    background-color: var(--color-tertiary);
+    transform: translateY(-2px);
+}
+
+.categories-section, .recipes-grid-section {
+    margin-bottom: 3rem;
+}
+
+.categories-section h2, .recipes-grid-section h2 {
+    font-size: 2rem;
+    color: var(--color-tertiary);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.categories-section h2::after, .recipes-grid-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.category-button {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: 2px solid var(--color-secondary);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-button:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.category-button.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.category-button.reset-filter {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+.category-button.reset-filter:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.no-results, .loading-state, .error-state {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-light-text);
+    padding: 3rem 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .search-bar {
+        margin: 1rem 0;
+        width: 100%;
+        max-width: none;
+    }
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .main-nav a {
+        margin: 0;
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .recipes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+    .category-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
