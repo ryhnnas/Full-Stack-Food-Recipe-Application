@@ -1,7 +1,6 @@
 # Aplikasi Resep Makanan
 
-![Aplikasi Resep Makanan Cover Image](https://via.placeholder.com/1200x600?text=Aplikasi+Resep+Makanan+Anda)
-*Ganti URL placeholder ini dengan screenshot terbaik dari aplikasi Anda!*
+<img width="1311" height="1352" alt="respmknn" src="https://github.com/user-attachments/assets/03cfc300-aa74-4702-bde3-9d749420546a" />
 
 Aplikasi Resep Makanan adalah platform web interaktif yang memungkinkan pengguna menjelajahi berbagai resep lezat, melihat detail bahan dan langkah-langkah, serta mencari resep berdasarkan nama atau bahan. Aplikasi ini juga dilengkapi dengan fitur kategori yang memudahkan pengguna menemukan resep sesuai jenis hidangan (sarapan, makan siang, makan malam, dll.).
 
